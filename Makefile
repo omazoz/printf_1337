@@ -6,7 +6,7 @@
 #    By: omazoz <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/24 10:29:41 by omazoz            #+#    #+#              #
-#    Updated: 2021/12/24 14:34:07 by omazoz           ###   ########.fr        #
+#    Updated: 2021/12/25 02:27:08 by omazoz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ SRC_FILE = ft_check_flags.c\
 OBJ_FILE = $(SRC_FILE:.c=.o)
 
 all: $(NAME)
+
+bonus: $(NAME)
 	
 $(NAME):	$(OBJ_FILE)
 	ar rc $(NAME) $(OBJ_FILE)
@@ -35,3 +37,4 @@ fclean : clean
 	rm -rf $(NAME)
 re : fclean $(NAME)
 
+.PHONY: all clean fclean re bonus
